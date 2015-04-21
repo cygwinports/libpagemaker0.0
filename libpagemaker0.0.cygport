@@ -1,0 +1,27 @@
+NAME="libpagemaker0.0"
+VERSION=0.0.2
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Adobe PageMaker import filter library"
+DESCRIPTION="Libpagemaker is library providing ability to interpret and import
+Adobe PageMaker content into various applications."
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/libpagemaker"
+SRC_URI="http://dev-www.libreoffice.org/src/libpagemaker/libpagemaker-${VERSION}.tar.xz"
+SRC_DIR="libpagemaker-${VERSION}"
+#	0.0.2-ldflags.patch
+PATCH_URI="
+	0.0.2-vpath.patch
+"
+
+PKG_NAMES="libpagemaker-tools ${NAME}_0 ${NAME}-devel ${NAME}-doc"
+libpagemaker_tools_CATEGORY="Graphics"
+libpagemaker_tools_SUMMARY="MS Publisher file converters"
+libpagemaker_tools_CONTENTS="usr/bin/*.exe"
+libpagemaker0_0_0_SUMMARY="${SUMMARY} (runtime)"
+libpagemaker0_0_0_CONTENTS="--exclude=html usr/bin/*-0.0-0.dll usr/share/doc/"
+libpagemaker0_0_devel_SUMMARY="${SUMMARY} (development)"
+libpagemaker0_0_devel_CONTENTS="usr/include/ usr/lib/"
+libpagemaker0_0_doc_SUMMARY="${SUMMARY} (API documentation)"
+libpagemaker0_0_doc_CONTENTS="usr/share/doc/${NAME}/html/"
+
+KEEP_LA_FILES="none"
