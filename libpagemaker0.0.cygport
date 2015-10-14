@@ -1,6 +1,6 @@
 NAME="libpagemaker0.0"
 VERSION=0.0.2
-RELEASE=2
+RELEASE=3
 CATEGORY="Libs"
 SUMMARY="Adobe PageMaker import filter library"
 DESCRIPTION="Libpagemaker is library providing ability to interpret and import
